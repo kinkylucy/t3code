@@ -2,6 +2,29 @@
 
 T3 Code is a minimal web GUI for coding agents (currently Codex, Claude, Cursor, and OpenCode, more coming soon).
 
+## Use Kimi K3 in T3 Code (this fork)
+
+This fork adds out-of-the-box support for routing T3 Code's Claude provider through [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) to **Kimi K3** via Kimi's Anthropic-compatible API.
+
+### Quick start
+
+1. **Start CLIProxyAPI** with your Kimi API key (see [config example](./docs/providers/kimi-proxy.md)).
+2. **Run T3 Code** using the instructions below.
+3. **Create an isolated Claude home** for the proxy:
+   ```bash
+   ./scripts/setup-kimi-claude-home.sh
+   ```
+4. **In T3 Code Settings → Providers**, add a Claude provider:
+   - **Display name:** `Claude → Kimi K3`
+   - **Binary path:** `claude`
+   - **Claude HOME path:** `~/.claude_kimi_proxy`
+   - **Environment variables:**
+     - `ANTHROPIC_API_KEY=cliproxy-local-key`
+     - `ANTHROPIC_BASE_URL=http://127.0.0.1:8317`
+5. **Create a thread**, pick the `Claude → Kimi K3` provider, and select `kimi-k3`.
+
+See the full guide: [Claude → Kimi K3 via CLIProxyAPI](./docs/providers/kimi-proxy.md).
+
 ## Installation
 
 > [!WARNING]
