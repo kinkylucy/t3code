@@ -23,6 +23,22 @@ This fork adds out-of-the-box support for routing T3 Code's Claude provider thro
      - `ANTHROPIC_BASE_URL=http://127.0.0.1:8317`
 5. **Create a thread**, pick the `Claude → Kimi K3` provider, and select `kimi-k3`.
 
+### macOS double-click launcher
+
+This repo includes a helper app bundle at:
+
+```text
+~/Applications/T3 Code Proxy.app
+```
+
+Double-click it to:
+
+1. Start the T3 Code server (if not already running).
+2. Generate a fresh pairing token.
+3. Open T3 Code in your default browser.
+
+> **First launch:** macOS may warn that the app is from an unidentified developer. Right-click the app and choose **Open**, then click **Open** in the dialog.
+
 See the full guide: [Claude → Kimi K3 via CLIProxyAPI](./docs/providers/kimi-proxy.md).
 
 ## Installation

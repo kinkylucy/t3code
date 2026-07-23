@@ -42,7 +42,27 @@ curl -s http://127.0.0.1:8317/v1/models \
   -H "Authorization: Bearer cliproxy-local-key"
 ```
 
-## 2. Create a dedicated Claude home
+## 2. Start T3 Code
+
+### Option A: Double-click the launcher (macOS)
+
+If you built this repo from source, a helper app bundle is installed at:
+
+```text
+~/Applications/T3 Code Proxy.app
+```
+
+Double-click it to start the T3 Code server and open your browser. On first launch, right-click the app and choose **Open** if macOS warns about an unidentified developer.
+
+### Option B: Run from source
+
+```bash
+node apps/server/dist/bin.mjs serve --port 13773 --base-dir ~/.t3-proxy-test
+```
+
+Then open the printed **Pairing URL** in your browser.
+
+## 3. Create a dedicated Claude home
 
 Use the helper script in this repo to keep the proxy setup isolated from your normal Claude account:
 
@@ -61,7 +81,7 @@ CLAUDE_MODEL=kimi-k3 \
   ./scripts/setup-kimi-claude-home.sh
 ```
 
-## 3. Add the provider in T3 Code
+## 4. Add the provider in T3 Code
 
 Open T3 Code Settings → Providers → Add Claude provider:
 
@@ -80,7 +100,7 @@ ANTHROPIC_BASE_URL  http://127.0.0.1:8317
 
 Mark `ANTHROPIC_API_KEY` as sensitive.
 
-## 4. Pick the model
+## 5. Pick the model
 
 When creating a thread, choose the `Claude → Kimi K3` provider and select `kimi-k3` from the model picker.
 
