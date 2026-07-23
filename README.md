@@ -12,6 +12,8 @@ T3 Code is a minimal web GUI for coding agents (currently Codex, Claude, Cursor,
 > - Claude: install [Claude Code](https://claude.com/product/claude-code) and run `claude auth login`
 > - Cursor: install [Cursor CLI](https://cursor.com/cli) and run `cursor-agent login`
 > - OpenCode: install [OpenCode](https://opencode.ai) and run `opencode auth login`
+>
+> **Use Kimi K3 through a proxy?** See [Claude → Kimi K3 via CLIProxyAPI](./docs/providers/kimi-proxy.md).
 
 ### Run without installing
 
@@ -58,6 +60,7 @@ There's no public docs site yet, checkout the miscellaneous markdown files in [d
 - [Keeping T3 Code in sync](./docs/user/server-updates.md)
 - [Architecture overview](./docs/architecture/overview.md)
 - [Provider guides](./docs/providers/codex.md)
+- [Claude → Kimi K3 via CLIProxyAPI](./docs/providers/kimi-proxy.md)
 - [Operations](./docs/operations/ci.md)
 - [Reference](./docs/reference/encyclopedia.md)
 
